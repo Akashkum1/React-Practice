@@ -23,9 +23,12 @@
         rootJS.appendChild(headingJs);
         //rendering h1 using react
         const heading = React.createElement("h1",{key: "12wewe",id : "head", className : "header"},'React JS from react CDN');
-        const heading2 = React.createElement("h2",{key: "1wewe"}, 'Heading 2 React JS from react CDN');
+        console.log(heading);
+        const heading2 = React.createElement("h2",null , 'Heading 2 React JS from react CDN');
+        console.log(heading2);
+        const divcontainer = React.createElement('div',{className : "reactConatiner"}, heading2)
         const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render([ heading, heading2]);
+        root.render([ divcontainer  ,heading, heading2]);
     </script>
 </body>
 </html>
