@@ -7,16 +7,23 @@
     <title>React Learning</title>
 </head>
 <body>
+    <div id="container"></div>
     <div id="root">
-        <h1>Hello React</h1>
+        <h1>Hello React</h1> <!--Using normal html -->
     </div>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script>
+        const headingJs = document.createElement('h1');
+        console.log(headingJs);
+        headingJs.innerHTML = 'Using Vanilla JS';
+        const rootJS = document.getElementById('container');
+        console.log(rootJS);
+        rootJS.appendChild(headingJs);
         const heading = React.createElement("h1",{key: "12wewe",id : "head", className : "header"},'React JS from react CDN');
         const heading2 = React.createElement("h2",{key: "1wewe"}, 'Heading 2 React JS from react CDN');
         const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render([heading, heading2]);
+        root.render([ heading, heading2]);
     </script>
 </body>
 </html>
